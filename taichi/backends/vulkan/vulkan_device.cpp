@@ -2008,9 +2008,9 @@ void VulkanDevice::create_vma_allocator() {
       PFN_vkGetPhysicalDeviceMemoryProperties2KHR(vkGetInstanceProcAddr(
           volkGetLoadedInstance(), "vkGetPhysicalDeviceMemoryProperties2KHR"));
   vk_vma_functions.vkGetDeviceBufferMemoryRequirements =
-      table.vkGetDeviceBufferMemoryRequirements2;
+      table.vkGetDeviceBufferMemoryRequirements2KHR;
   vk_vma_functions.vkGetDeviceImageMemoryRequirements =
-      table.vkGetDeviceImageMemoryRequirements2;
+      table.vkGetDeviceImageMemoryRequirements2KHR;
 
   allocatorInfo.pVulkanFunctions = &vk_vma_functions;
 
