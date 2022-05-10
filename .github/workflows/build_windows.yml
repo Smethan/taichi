@@ -67,7 +67,7 @@ jobs:
         - name: Build Python Wheel
           shell: powershell
           run: |
-            .\.github\workflows\scripts\win_build.ps1 -installVulkan -libsDir
+            .\.github\workflows\scripts\win_build.ps1 -installVulkan
           env:
             PROJECT_NAME: ${{ matrix.name }}
 
